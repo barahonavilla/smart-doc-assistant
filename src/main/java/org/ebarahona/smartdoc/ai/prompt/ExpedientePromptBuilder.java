@@ -1,8 +1,8 @@
 package org.ebarahona.smartdoc.ai.prompt;
 
-public class PromptBuilder {
+public class ExpedientePromptBuilder {
     private static final int MAX_CHARS = 6000;
-    public static String buildExpedientePrompt(String text) {
+    public static String build(String text) {
 
         String safeText = text.length() > MAX_CHARS
                 ? text.substring(0, MAX_CHARS)

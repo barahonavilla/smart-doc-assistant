@@ -7,4 +7,8 @@ import java.util.List;
 public interface AiService {
 
     List<ExpedienteDto> analyze(String text);
+
+    String translate(String text,
+                     String sourceLanguage,
+                     String targetLanguage);
 }
