@@ -3,6 +3,7 @@ package org.ebarahona.smartdoc.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ebarahona.smartdoc.ai.prompt.ExpedientePromptBuilder;
+import org.ebarahona.smartdoc.ai.prompt.TranslationPromptBuilder;
 import org.ebarahona.smartdoc.dto.ExpedienteDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -76,8 +77,4 @@ public class LocalAiService implements AiService{
         }
     }
 
-    @Override
-    public String translate(String text, String sourceLanguage, String targetLanguage) {
-        return null;
-    }
 }
