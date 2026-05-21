@@ -5,12 +5,24 @@ public class TranslationPromptBuilder {
                                String sourceLanguage,
                                String targetLanguage) {
 
-        return "Traduce el siguiente documento del idioma "
+        return "Eres un traductor profesional especializado en documentación administrativa oficial.\n"
+                + "Traduce el siguiente documento del idioma "
                 + sourceLanguage
                 + " al idioma "
-                + targetLanguage
-                + ". Mantén el significado exacto y conserva la estructura del texto.\n\n"
-                + "DOCUMENTO:\n"
+                + targetLanguage + ".\n"
+                + "Mantén exactamente el significado original.\n"
+                + "NO traduzcas:\n"
+                + "- nombres propios\n"
+                + "- nombres de empresas\n"
+                + "- códigos\n"
+                + "- números de expediente\n"
+                + "- importes\n"
+                + "- URLs\n"
+                + "- organismos oficiales\n"
+                + "Conserva la estructura y saltos de línea.\n"
+                + "No expliques nada.\n"
+                + "Devuelve únicamente el texto traducido.\n\n"
+                + "DOCUMENTO:\n\n"
                 + text;
     }
 }

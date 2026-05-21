@@ -3,7 +3,6 @@ package org.ebarahona.smartdoc.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ebarahona.smartdoc.ai.prompt.ExpedientePromptBuilder;
-import org.ebarahona.smartdoc.ai.prompt.TranslationPromptBuilder;
 import org.ebarahona.smartdoc.dto.ExpedienteDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class LocalAiService implements AiService{
+public class ExpedienteAiService implements AiService{
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
@@ -25,7 +24,7 @@ public class LocalAiService implements AiService{
     @Value("${ollama.model}")
     private String model;
 
-    public LocalAiService(RestTemplate restTemplate, ObjectMapper objectMapper) {
+    public ExpedienteAiService(RestTemplate restTemplate, ObjectMapper objectMapper) {
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
     }

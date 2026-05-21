@@ -10,16 +10,16 @@ import java.util.List;
 @Service
 public class DocumentExtractionService {
 
-    private final LocalAiService localAiService;
+    private final ExpedienteAiService expedienteAiService;
 
-    public DocumentExtractionService(LocalAiService localAiService) {
-        this.localAiService = localAiService;
+    public DocumentExtractionService(ExpedienteAiService expedienteAiService) {
+        this.expedienteAiService = expedienteAiService;
     }
 
     public DocumentResponse extract(String fileName, String rawText) {
 
         // AQUÍ YA USAS IA REAL
-        List<ExpedienteDto> expedientes = localAiService.analyze(rawText);
+        List<ExpedienteDto> expedientes = expedienteAiService.analyze(rawText);
 
         return new DocumentResponse(
                 fileName,
